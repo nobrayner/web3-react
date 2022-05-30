@@ -162,6 +162,7 @@ export class MetaMask extends Connector {
       })
       .catch((error: ProviderRpcError) => {
         this.actions.reportError(error)
+        throw error
       })
   }
 
